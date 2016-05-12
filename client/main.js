@@ -1,7 +1,7 @@
 // import { Template } from 'meteor/templating';
 // import { ReactiveVar } from 'meteor/reactive-var';
 //
-// import './main.html';
+// import './index.html';
 //
 // Template.hello.onCreated(function helloOnCreated() {
 //   // counter starts at 0
@@ -21,15 +21,36 @@
 //   },
 // });
 
-Template.mainLayout.onRendered(function () {
-    console.log('rendered main layout');
+// Template.mainLayout.onRendered(function () {
+//     console.log('rendered main layout');
+// });
+//
+// Template.mainLayout.onDestroyed(function () {
+//
+//     console.log('destroy')
+// });
+//
+// Template.test.onRendered(function () {
+//     console.log('rendered test');
+// });
+
+
+
+
+Template.navBar.helpers({
+    logoPath: 'Logo'
 });
 
-Template.mainLayout.onDestroyed(function () {
-
-    console.log('destroy')
+Template.navBar.onRendered(function () {
+    console.log('rendered navBar');
+    $('[data-toggle="popover"]').popover();
 });
 
-Template.test.onRendered(function () {
-    console.log('rendered test');
+Template.navBar.events({
+    'click .js-work'(event, instance) {
+
+        console.log('clicked!!!', event, instance);
+        // Show the backdrop
+
+  }
 });
