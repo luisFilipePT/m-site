@@ -1,0 +1,29 @@
+
+#carousel-home {
+  max-width: 1366px;
+}
+
+
+.carousel-indicators {
+
+  bottom: -50px;
+
+    li {
+
+      background-color: grey !important;
+      border: none;
+      margin-right: 20px;
+    }
+
+  .active {
+    background-color: #9e1427 !important;
+    border: none;
+    margin-right: 20px;
+  }
+}
+
+.card {
+  background-color: black;
+  color: white;
+  border: none !important;
+}

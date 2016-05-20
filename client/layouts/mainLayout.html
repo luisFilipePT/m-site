@@ -1,5 +1,7 @@
 <template name="mainLayout">
-    {{> Template.dynamic template=top}}
-    {{> Template.dynamic template=main}}
-    {{> Template.dynamic template=footer}}
+    <div id="wrapper-nav-bar">
+        {{> Template.dynamic template=top}}
+    </div>
+        {{> Template.dynamic template=main}}
+        {{> Template.dynamic template=footer}}
 </template>

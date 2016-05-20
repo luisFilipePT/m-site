@@ -1,14 +1,49 @@
-.navbar {
+@import 'variables';
 
+.navbar {
+  background-color: #EDF2F4;
   height: 75px;
   padding-top: 20px;
   padding-left: 25px;
   padding-right: 50px;
+  text-align: center;
 
   .navbar-brand {
 
-    padding-left: 25px;
-    padding-right: 100px;
+    margin-left: 50px;
   }
 
+  .navbar-nav {
+    display: inline-block;
+
+    .nav-item.nav-link {
+      margin-left: 3rem;
+    }
+
+  }
+
+  .nav.navbar-nav.pull-xs-right {
+    margin-right: 50px;
+
+    .nav-item.nav-link {
+      margin-left: 1.5rem;
+    }
+  }
+
+}
+
+// HOME CARDS
+
+.home-cards {
+
+  margin-top: 100px;
+}
+
+// NAB BAR DROPDOWNS
+
+.drop-work {
+  display: none;
+  z-index: $zindex-navbar-dropdown;
+  background-color: blue;
+  width: 800px;
 }

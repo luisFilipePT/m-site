@@ -35,7 +35,7 @@
 // });
 
 
-
+var utils = require('../lib/utils');
 
 Template.navBar.helpers({
     logoPath: 'Logo'
@@ -43,14 +43,32 @@ Template.navBar.helpers({
 
 Template.navBar.onRendered(function () {
     console.log('rendered navBar');
-    $('[data-toggle="popover"]').popover();
+
+    this.aboutMenu = new Tether({
+        element: '.drop-work',
+        target: '.navbar',
+        attachment: 'top center',
+        targetAttachment: 'bottom center'
+    });
 });
 
 Template.navBar.events({
+    
     'click .js-work'(event, instance) {
+        event.preventDefault();
 
-        console.log('clicked!!!', event, instance);
-        // Show the backdrop
+        var dropWork = $('.drop-work');
 
+        dropWork.toggle();
+
+        if (dropWork.is(':visible')) {
+            // element is Visible
+            utils.blockAndLoad('#wrapper-nav-bar', true, true);
+        } else {
+            // element is Hidden
+            utils.blockAndLoad('#wrapper-nav-bar', false, true);
+        }
+
+        instance.aboutMenu.position();
   }
 });

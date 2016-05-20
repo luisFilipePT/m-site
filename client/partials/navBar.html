@@ -1,10 +1,9 @@
 <template name="navBar">
     <nav class="navbar navbar-fixed-top navbar-light bg-faded">
         <a class="navbar-brand" href="/">{{ logoPath }}</a>
-        <div class="nav navbar-nav">
+        <div class="nav navbar-nav center-menu">
             <a class="nav-item nav-link" href="/about">About</a>
-            <a class="nav-item nav-link js-work" href="#" data-container="body" data-toggle="popover" data-placement="bottom"
-               data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Work</a>
+            <a class="nav-item nav-link js-work" href="#">Work</a>
             <a class="nav-item nav-link" href="#">Contact</a>
             <a class="nav-item nav-link" href="#">Blog</a>
             <a class="nav-item nav-link" href="#">Videos</a>
@@ -15,4 +14,30 @@
             <a class="nav-item nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
         </div>
     </nav>
+
+
+    <!-- DROP DOWNS -->
+    <div class="drop-work card-group">
+        <div class="card">
+            <img class="card-img-top" src="http://lorempixel.com/400/100/nature/5" data-src="..." alt="Card image cap">
+            <img class="card-img-top" src="http://lorempixel.com/400/100/nature/6" data-src="..." alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card card-inverse">
+            <img class="card-img" src="http://lorempixel.com/397/400/nature/2" data-src="..." alt="Card image">
+            <div class="card-block card-img-overlay">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <button class="btn">Button</button>
+            </div>
+        </div>
+    </div>
+
+
+
 </template>
